@@ -61,12 +61,13 @@ public class GerenciamentoVotacao  implements  GerenciamentoVotacaoInterface {
     } else {
       int total = this.cpfsComputados.size();
       for (int i = 0; i < this.pessoasCandidatas.size(); i += 1) {
+        double divisao = (double) 100.0f * this.pessoasCandidatas.get(i).getVotos() / total;
         System.out.println("Nome: "
             + this.pessoasCandidatas.get(i).getNome()
             + " - "
             + this.pessoasCandidatas.get(i).getVotos()
             + " votos ( "
-            + (this.pessoasCandidatas.get(i).getVotos() / total) * 100
+            + divisao
             + "% )");
       }
       System.out.print("Total de votos: " + total);
