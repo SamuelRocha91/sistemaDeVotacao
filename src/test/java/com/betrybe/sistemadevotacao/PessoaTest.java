@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class PessoaTest {
   @Test
-  @DisplayName("1 - Classe abstrata Pessoa implementada")
+  @DisplayName("1 - Implemente a classe abstrata Pessoa")
   public void testPessoaClass() {
     Class<?> classToCheck = Pessoa.class;
 

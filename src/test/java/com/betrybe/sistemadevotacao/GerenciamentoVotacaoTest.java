@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 public class GerenciamentoVotacaoTest {
 
   @Test
-  @DisplayName("4 - Classe GerenciamentoVotacao com atributos implementada")
+  @DisplayName("4 - Implementar a classe GerenciamentoVotacao com atributos")
   public void testGerenciamentoVotacaoAndFields() {
     Class<?> classToCheck = GerenciamentoVotacao.class;
 
@@ -39,7 +39,7 @@ public class GerenciamentoVotacaoTest {
   }
 
   @Test
-  @DisplayName("5 - Métodos de cadastro da GerenciamentoVotacao implementados")
+  @DisplayName("5 - Implementar os métodos de cadastro da classe GerenciamentoVotacao")
   public void testGerenciamentoVotacaoRegisterMethods()
       throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
     checkRegisterMethodsOk();
@@ -106,7 +106,7 @@ public class GerenciamentoVotacaoTest {
 
 
   @Test
-  @DisplayName("6 - Métodos de votação da GerenciamentoVotacao implementados")
+  @DisplayName("6 - Implementar os métodos de votação da classe GerenciamentoVotacao")
   public void testGerenciamentoVotacaoVotingMethods()
       throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
     checkVotingMethodsOk();

@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 public class PessoaEleitoraTest {
   @Test
-  @DisplayName("3 - Classe PessoaEleitora implementada")
+  @DisplayName("3 - Implemente a classe PessoaEleitora")
   public void testPessoaEleitora()
       throws InvocationTargetException, InstantiationException, IllegalAccessException {
     Class<?> classToCheck = PessoaEleitora.class;
