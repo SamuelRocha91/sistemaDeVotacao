@@ -4,28 +4,38 @@ import java.util.ArrayList;
 
 public class GerenciamentoVotacao  implements  GerenciamentoVotacaoInterface {
 
-  private ArrayList<PessoaCandidata> pessoasCandidatas;
+  private ArrayList<PessoaCandidata> pessoasCandidatas = new ArrayList<PessoaCandidata>();
 
-  private ArrayList<PessoaEleitora> pessoasEleitoras;
+  private ArrayList<PessoaEleitora> pessoasEleitoras = new ArrayList<PessoaEleitora>();
 
-  private ArrayList<String> cpfsComputados;
+  private ArrayList<String> cpfsComputados = new ArrayList<String>();
 
   @Override
   public void cadastrarPessoaCandidata(String nome, int numero) {
+    int total = 0;
+    for (int i = 0; i < this.pessoasCandidatas.size(); i += 1) {
+      if (this.pessoasCandidatas.get(i).getNumero() == numero) {
+        System.out.print("Número da pessoa candidata já utilizado!");
+        total += 1;
+      }
+    }
     PessoaCandidata novoCandidato = new PessoaCandidata(nome, numero);
-    if (this.pessoasCandidatas.contains(novoCandidato)) {
-      System.out.print("Número da pessoa candidata já utilizado!");
-    } else {
+    if (total == 0) {
       this.pessoasCandidatas.add(novoCandidato);
     }
   }
 
   @Override
   public void cadastrarPessoaEleitora(String nome, String cpf) {
+    int total = 0;
+    for (int i = 0; i < this.pessoasEleitoras.size(); i += 1) {
+      if (this.pessoasEleitoras.get(i).getCpf().equals(cpf)) {
+        System.out.print("Pessoa eleitora já cadastrada!");
+        total += 1;
+      }
+    }
     PessoaEleitora novoEleitor = new PessoaEleitora(nome, cpf);
-    if (this.pessoasEleitoras.contains(novoEleitor)) {
-      System.out.print("Pessoa eleitora já cadastrada!");
-    } else {
+    if (total == 0) {
       this.pessoasEleitoras.add(novoEleitor);
     }
   }
