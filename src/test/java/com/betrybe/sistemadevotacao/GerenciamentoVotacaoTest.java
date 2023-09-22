@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 public class GerenciamentoVotacaoTest {
 
   @Test
-  @DisplayName("4 - Classe GerenciamentoVotacao com atributos implementada")
+  @DisplayName("4 - Implementar a classe GerenciamentoVotacao com atributos")
   public void testGerenciamentoVotacaoAndFields() {
     Class<?> classToCheck = GerenciamentoVotacao.class;
 
@@ -39,7 +39,7 @@ public class GerenciamentoVotacaoTest {
   }
 
   @Test
-  @DisplayName("5 - Métodos de cadastro da GerenciamentoVotacao implementados")
+  @DisplayName("5 - Implementar os métodos de cadastro da classe GerenciamentoVotacao")
   public void testGerenciamentoVotacaoRegisterMethods()
       throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
     checkRegisterMethodsOk();
@@ -69,14 +69,6 @@ public class GerenciamentoVotacaoTest {
     gerenciamentoVotacao.cadastrarPessoaEleitora("João", "111.222.333.444-55");
 
     assertEquals("Pessoa eleitora já cadastrada!", baos.toString().strip());
-
-    baos = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(baos));
-
-    gerenciamentoVotacao.votar("111.222.333.444-55", 12345);
-    gerenciamentoVotacao.votar("111.222.333.444-55", 54321);
-
-    assertEquals("Pessoa eleitora já votou!", baos.toString().strip());
   }
 
   private void checkRegisterMethodsOk()
@@ -110,24 +102,11 @@ public class GerenciamentoVotacaoTest {
     assertEquals(1, pessoasEleitoras.size());
 
     assertEquals("João", getNome.invoke(pessoasEleitoras.get(0)));
-
-
-    Field cpfsComputadosField
-        = GerenciamentoVotacao.class.getDeclaredField("cpfsComputados");
-    cpfsComputadosField.setAccessible(true);
-
-    ArrayList<String> cpfsComputados
-        = (ArrayList<String>) cpfsComputadosField.get(gerenciamentoVotacao);
-
-    assertEquals(0, cpfsComputados.size());
-    gerenciamentoVotacao.votar("111.222.333.444-55", 445566);
-    assertEquals(1, cpfsComputados.size());
-    assertEquals("111.222.333.444-55", cpfsComputados.get(0));
   }
 
 
   @Test
-  @DisplayName("6 - Métodos de votação da GerenciamentoVotacao implementados")
+  @DisplayName("6 - Implementar os métodos de votação da classe GerenciamentoVotacao")
   public void testGerenciamentoVotacaoVotingMethods()
       throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
     checkVotingMethodsOk();
