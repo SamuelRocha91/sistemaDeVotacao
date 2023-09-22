@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Principal {
 
+  /**
+   * Implementa sistema de interação com o usuário para votação.
+   * @param args string.
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     GerenciamentoVotacao votacao = new GerenciamentoVotacao();
