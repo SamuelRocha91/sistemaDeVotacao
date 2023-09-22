@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class PrincipalTest {
 
   @Test
-  @DisplayName("7 - Classe Principal implementada")
+  @DisplayName("7 - Implementar a classe Principal")
   public void testePrincipal() {
     String[] inputLines = new String[] {
         "1", "Maria", "12345",

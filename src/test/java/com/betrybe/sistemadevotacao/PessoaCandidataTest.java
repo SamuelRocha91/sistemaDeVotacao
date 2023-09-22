@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 public class PessoaCandidataTest {
   @Test
-  @DisplayName("2 - Classe PessoaCandidata implementada")
+  @DisplayName("2 - Implemente a classe PessoaCandidata")
   public void testPessoaCandidata()
       throws InvocationTargetException, InstantiationException, IllegalAccessException {
     Class<?> classToCheck = PessoaCandidata.class;
@@ -48,8 +48,8 @@ public class PessoaCandidataTest {
     PessoaCandidata pessoaCandidata = (PessoaCandidata) constructor.newInstance("João", 123);
 
     try {
-      Method getNome = PessoaCandidata.class.getDeclaredMethod("getNome");
-      Method setNome = PessoaCandidata.class.getDeclaredMethod("setNome", String.class);
+      Method getNome = PessoaCandidata.class.getMethod("getNome");
+      Method setNome = PessoaCandidata.class.getMethod("setNome", String.class);
       assertEquals("João", getNome.invoke(pessoaCandidata));
       setNome.invoke(pessoaCandidata, "Joãozinho");
       assertEquals("Joãozinho", getNome.invoke(pessoaCandidata));
