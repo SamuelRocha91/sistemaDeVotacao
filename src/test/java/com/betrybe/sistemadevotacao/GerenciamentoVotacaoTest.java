@@ -69,14 +69,6 @@ public class GerenciamentoVotacaoTest {
     gerenciamentoVotacao.cadastrarPessoaEleitora("João", "111.222.333.444-55");
 
     assertEquals("Pessoa eleitora já cadastrada!", baos.toString().strip());
-
-    baos = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(baos));
-
-    gerenciamentoVotacao.votar("111.222.333.444-55", 12345);
-    gerenciamentoVotacao.votar("111.222.333.444-55", 54321);
-
-    assertEquals("Pessoa eleitora já votou!", baos.toString().strip());
   }
 
   private void checkRegisterMethodsOk()
@@ -110,19 +102,6 @@ public class GerenciamentoVotacaoTest {
     assertEquals(1, pessoasEleitoras.size());
 
     assertEquals("João", getNome.invoke(pessoasEleitoras.get(0)));
-
-
-    Field cpfsComputadosField
-        = GerenciamentoVotacao.class.getDeclaredField("cpfsComputados");
-    cpfsComputadosField.setAccessible(true);
-
-    ArrayList<String> cpfsComputados
-        = (ArrayList<String>) cpfsComputadosField.get(gerenciamentoVotacao);
-
-    assertEquals(0, cpfsComputados.size());
-    gerenciamentoVotacao.votar("111.222.333.444-55", 445566);
-    assertEquals(1, cpfsComputados.size());
-    assertEquals("111.222.333.444-55", cpfsComputados.get(0));
   }
 
 

@@ -47,8 +47,8 @@ public class PessoaEleitoraTest {
     PessoaEleitora pessoaEleitora = (PessoaEleitora) constructor.newInstance("João", "123.456.789-00");
 
     try {
-      Method getNome = PessoaEleitora.class.getDeclaredMethod("getNome");
-      Method setNome = PessoaEleitora.class.getDeclaredMethod("setNome", String.class);
+      Method getNome = PessoaEleitora.class.getMethod("getNome");
+      Method setNome = PessoaEleitora.class.getMethod("setNome", String.class);
       assertEquals("João", getNome.invoke(pessoaEleitora));
       setNome.invoke(pessoaEleitora, "Joãozinho");
       assertEquals("Joãozinho", getNome.invoke(pessoaEleitora));
