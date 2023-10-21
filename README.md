@@ -1,10 +1,9 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h1>Projeto Sistema de Votação</h1>
+<p>Trata-se de um projeto avaliativo desenvolvido no módulo de Java do curso de Desenvolvimento Web da Trybe. Destacam-se como competências desenvolvidas: </p>
+ <ol>
+  <li>Compreensão dos conceitos fundamentais da Programação Orientada a Objetos (POO) aplicados a Java;</li>
+  <li>Lógica de programação;</li>
+  <li>Aplicar conceitos como classes, objetos, métodos, encapsulamento, herança, polimorfismo, interfaces e classes abstratas.</li>
+</ol>
+<p>A aplicação consiste num sistema de votação eletrônico onde é possível cadastrar candidatos, cadastrar eleitores, realizar votação e conferir os resultados. </p>
+
