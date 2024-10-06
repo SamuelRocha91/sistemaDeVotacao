@@ -18,6 +18,7 @@
 
 <details>
   <summary><h2>功能</h2></summary>
+
   - **候选人注册**：允许将候选人添加到系统中，包括姓名和号码。
   - **选民注册**：允许注册选民，包括姓名和 CPF（巴西个人身份证号）。
   - **投票系统**：选民可以通过输入其 CPF 和候选人号码来投票。
@@ -90,6 +91,7 @@
 
 <details>
   <summary><h2>使用的技术</h2></summary>
+
   - **Java**：开发中使用的主要编程语言。
   - **Scanner**：用于捕获用户输入的 Java 类。
   - **面向对象编程**：在系统设计中应用的 OOP 概念。
@@ -97,6 +99,7 @@
 
 <details>
   <summary><h2>其他项目</h2></summary>
+
   - 🏛️ [博物馆定位器](https://github.com/SamuelRocha91/localizadorDeMuseus/blob/main/README_ch.md)
   - 📃 [进度规则](https://github.com/SamuelRocha91/project_rule_of_progression/blob/main/README_ch.md)
   - 🌱 [Agrix](https://github.com/SamuelRocha91/Agrix/blob/main/README_ch.md)
@@ -104,6 +107,7 @@
 
 <details>
   <summary><h2>如何运行</h2></summary>
+  
   1. 将此仓库克隆到您的本地计算机：
      ```sh
      git clone https://github.com/SamuelRocha91/sistemaDeVotacao.git

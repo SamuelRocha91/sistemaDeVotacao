@@ -18,6 +18,7 @@
 
 <details>
   <summary><h2>Funcionalidades</h2></summary>
+
   - **Registro de Candidatos**: Permite añadir candidatos al sistema con nombre y número.
   - **Registro de Votantes**: Permite registrar votantes con nombre y CPF.
   - **Sistema de Votación**: Los votantes pueden votar ingresando su CPF y el número del candidato.
@@ -90,6 +91,7 @@
 
 <details>
   <summary><h2>Tecnologías Utilizadas</h2></summary>
+
   - **Java**: Lenguaje de programación principal utilizado en el desarrollo.
   - **Scanner**: Clase de Java utilizada para capturar entradas del usuario.
   - **Programación Orientada a Objetos**: Conceptos de POO aplicados al diseño del sistema.
@@ -97,6 +99,7 @@
 
 <details>
   <summary><h2>Otros Proyectos</h2></summary>
+
   - 🏛️ [Localizador de Museos](https://github.com/SamuelRocha91/localizadorDeMuseus/blob/main/README_es.md)
   - 📃 [Reglas de Progresión](https://github.com/SamuelRocha91/project_rule_of_progression/blob/main/README_es.md)
   - 🌱 [Agrix](https://github.com/SamuelRocha91/Agrix/blob/main/README_es.md)
@@ -104,6 +107,7 @@
 
 <details>
   <summary><h2>Cómo Ejecutar</h2></summary>
+  
   1. Clona este repositorio en tu máquina local:
      ```sh
      git clone https://github.com/SamuelRocha91/sistemaDeVotacao.git
